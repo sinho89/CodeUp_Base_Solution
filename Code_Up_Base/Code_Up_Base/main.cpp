@@ -2,8 +2,64 @@
 
 using namespace std;
 
+void Solution98() // À±³â
+{
+	int a;
+	bool isLeap = false;
+	cin >> a;
+
+	if (a % 400 == 0)
+		isLeap = true;
+	else if ((a % 4 == 0) && (a % 100 != 0))
+		isLeap = true;
+
+	if (isLeap)
+		cout << "Leap";
+	else
+		cout << "Normal";
+}
+
+void Solution99() // 30ºÐÀü
+{
+	int h, m;
+	cin >> h >> m;
+
+	if (m < 30)
+	{
+		m += 30;
+		
+		if (h == 0)
+			h = 24;
+		h -= 1;
+		
+	}
+	else
+		m -= 30;
+
+	cout << h << " " << m;
+}
+
+void Solution100() // ÀÚ¸´¼ö ±¸ÇÏ±â
+{
+	int a;
+	int b = 0;
+	cin >> a;
+
+	while (true)
+	{
+		if (a <= 0)
+			break;
+		
+		a /= 10;
+		++b;
+	}
+
+	cout << b;
+}
+
 int main()
 {
+	Solution100();
 	return 0;
 }
 
